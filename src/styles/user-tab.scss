@@ -1,0 +1,445 @@
+$standardWidth: 750;
+@function calcView($pixels) {
+  @return (($pixels/$standardWidth) * 100) + vw;
+}
+
+.user-main-tab {
+  margin-right: 2vw;
+  margin-left: 2vw;
+  .reward-history-btn {
+    background-image: url("./../assets/rewhistory.png");
+    position: fixed;
+    right: 0;
+    top: 0;
+    top: 112vw;
+    height: 9vw;
+    width: 13vw;
+    border-radius: 1.33333vw 0px 0 1.33333vw;
+    font-size: 3vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    top: 50%;
+  }
+  .bean-tab-btns {
+    display: flex;
+    justify-content: center;
+    margin-top: 2vw;
+    button.hourlyOn {
+      background-image: url("../assets/hourlybtnOn.png");
+      background-repeat: no-repeat;
+      width: 25vw;
+      height: 8vw;
+      background-color: transparent;
+      border: none;
+      background-size: contain;
+    }
+    button.hourlyOff {
+      background-image: url("../assets/hourlybtnOff.png");
+      background-repeat: no-repeat;
+      width: 25vw;
+      height: 8vw;
+      background-color: transparent;
+      border: none;
+      background-size: contain;
+    }
+    button.dailyOn {
+      background-image: url("../assets/dailybtnOn.png");
+      background-repeat: no-repeat;
+      width: 25vw;
+      height: 8vw;
+      background-color: transparent;
+      border: none;
+      background-size: contain;
+    }
+    button.dailyOff {
+      background-image: url("../assets/dailybtnOff.png");
+      background-repeat: no-repeat;
+      width: 25vw;
+      height: 8vw;
+      background-color: transparent;
+      border: none;
+      background-size: contain;
+    }
+  }
+  .beans-spot {
+    min-height: calcView(350);
+
+    position: relative;
+    bottom: 1.93333vw;
+    .beans-spot-img {
+      width: 100%;
+    }
+    img.beans-spot-txt {
+      width: 45.66667vw;
+      position: absolute;
+      right: calcView(72);
+      right: 20.6vw;
+      top: calcView(12);
+    }
+    img.daily-beans-spot-txt {
+      width: 66.66667vw;
+      position: absolute;
+      right: 9.6vw;
+      right: 11.6vw;
+      top: 3.6vw;
+    }
+    .beanspot {
+      position: absolute;
+      width: 33.8vw;
+      right: 51.86667vw;
+      top: 13.93333vw;
+    }
+
+    .beans-amount-bg {
+      background-image: url("../assets/beansamountbg.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+
+      width: 27vw;
+      height: 10vw;
+      position: absolute;
+      top: 20vw;
+      right: 6vw;
+      span {
+        position: relative;
+        left: 9vw;
+        top: 0.5vw;
+        font-size: 2vw;
+        color: white;
+      }
+    }
+
+    p {
+      position: absolute;
+      top: 30vw;
+      font-size: 3vw;
+      text-align: center;
+      width: 31vw;
+      color: white;
+      left: 57vw;
+    }
+  }
+
+  .user-leaderbrd-listitem {
+    background-image: url("../assets/winnerbg.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 98%;
+    margin-left: 1vw;
+    height: 18vw;
+    position: relative;
+    .user-user-info {
+      display: flex;
+      position: absolute;
+      top: 3vw;
+      margin-left: 2vw;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      .indexNo {
+        font-size: 2.66667vw;
+      }
+      .profile {
+        width: 6.66667vw;
+        height: 6.66667vw;
+        border-radius: 100%;
+        margin-right: 1vw;
+        margin-left: 1vw;
+      }
+      .userName {
+        font-size: 2.93333vw;
+      }
+    }
+    .estTxt {
+      position: absolute;
+      right: 18vw;
+      font-size: 3.5vw;
+      top: 2vw;
+      color: white;
+    }
+    .runsTxt {
+      position: absolute;
+      right: 23vw;
+      top: 8vw;
+      font-size: 4vw;
+    }
+  }
+
+  .user-leaderboard-topper-listitem {
+    background-image: url("../assets/winnerbg.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 98%;
+    height: 18vw;
+    position: relative;
+    margin-bottom: 2vw;
+    // margin-left: 1vw;
+    .user-user-info {
+      display: flex;
+      position: absolute;
+      top: 3vw;
+      margin-left: 2vw;
+      align-items: center;
+      color: white;
+      width: 50%;
+
+      .topper-images {
+        position: relative;
+        left: 2.5vw;
+        top: 2vw;
+
+        .profile {
+          width: 6.66667vw;
+          height: 6.66667vw;
+          border-radius: 100%;
+          object-fit: cover;
+          position: relative;
+          // top: 0;
+          left: 0;
+          bottom: 1vw;
+        }
+        .rankImg {
+          width: 12.66667vw;
+          /* height: 8.66667vw; */
+          object-fit: contain;
+          position: absolute;
+          left: -3vw;
+          bottom: 1vw;
+        }
+      }
+    }
+    .indexNo {
+      font-size: 2.66667vw;
+    }
+
+    .userName {
+      font-size: 2.93333vw;
+      position: relative;
+      left: 5vw;
+      text-overflow: ellipsis;
+    width: 29vw;
+    margin-left: 0.5vw;
+    white-space: nowrap;
+    overflow: hidden;
+    }
+  }
+  .estTxt {
+    position: absolute;
+    right: 18vw;
+    font-size: 3.5vw;
+    top: 2vw;
+    color: white;
+  }
+  .runsTxt {
+    position: absolute;
+    right: 23vw;
+    top: 8vw;
+    font-size: 4vw;
+  }
+  .game {
+    background-image: url("../assets/game-bg.png");
+    width: 95%;
+    // min-height: calcView(500);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding-top: 2vw;
+    margin-left: 3vw;
+
+    .gift-btn {
+      background-image: url("../assets/gifticon.png");
+      width: 10vw;
+      height: 10vw;
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: relative;
+      background-color: transparent;
+      border: none;
+      left: -5vw;
+    }
+    .runs-btns {
+      display: flex;
+      justify-content: space-around;
+      color: white;
+      .totalRuns {
+        background-image: url("../assets/currunsbg.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        color: white;
+        background-color: transparent;
+        border: none;
+        width: 38vw;
+        height: 7vw;
+        font-size: 3.5vw;
+      }
+      .currentRuns {
+        background-image: url("../assets/currunsbg.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        color: white;
+        background-color: transparent;
+        border: none;
+        width: 38vw;
+        height: 7vw;
+        font-size: 3.5vw;
+
+      }
+    }
+
+    .main-game {
+      // background-image: url('../assets/gameBg.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      // height: calcView(200);
+      position: relative;
+      display: flex;
+      justify-content: center;
+      margin-top: 2vw;
+
+      .score {
+        position: absolute;
+        color: white;
+        z-index: 100;
+        top: 2vw;
+        font-size: 3vw;
+      }
+      .runsDiv {
+        font-size: 3vw;
+        color: white;
+        position: absolute;
+        z-index: 200;
+        bottom: 10vw;
+
+        .oneRuns {
+          right: 14vw;
+          position: absolute;
+          top: -4vw;
+        }
+        .twoRuns {
+          position: absolute;
+          right: 8.4vw;
+          bottom: -0.5vw;
+      }
+        }
+        .threeRuns {
+          position: absolute;
+          right: 3vw;
+          bottom: -1vw;
+        }
+      
+      .fourRuns {
+        position: absolute;
+        left: 1vw;
+        bottom: -1vw;
+      }
+      .fiveRuns {
+        position: absolute;
+        right: -8.4vw;
+        bottom: -1vw;
+      }
+      .sixRuns {
+        position: absolute;
+        right: -13.8vw;
+        bottom: 0vw;
+      }
+    }
+
+    .bg-img {
+      width: 60%;
+      object-fit: contain;
+      z-index: 100;
+    }
+    .game-stop {
+      position: absolute;
+      width: 57%;
+      // height: 161px;
+
+      .game-stop-img {
+        width: 100%;
+        top: 10vw;
+        object-fit: cover;
+      }
+    }
+    .game-play {
+      position: absolute;
+      width: 57%;
+
+      .game-playing-img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .playBtn {
+      width: 14vw;
+      object-fit: contain;
+      position: absolute;
+      bottom: 0vw;
+      left: 35.5vw;
+      z-index: 100;
+    }
+
+    .game-score {
+      width: 11vw;
+      height: calcView(50);
+      background-color: #31356d;
+      position: absolute;
+      line-height: 3vw;
+      text-align: center;
+    }
+  }
+
+  .game-chances {
+    background-image: url("../assets/User-tab-assest/chance-bg.png.png");
+    background-repeat: no-repeat;
+    background-size: inherit;
+    height: 13vw;
+    margin-top: 2vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 1.5vw;
+
+    .active-ball {
+      width: calcView(60);
+      height: calcView(60);
+      background-image: url("../assets/timer.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-color: transparent;
+      border: none;
+    }
+    .un-active-ball {
+      width: calcView(60);
+      height: calcView(60);
+      background-image: url("../assets/timeroff.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-color: transparent;
+      border: none;
+    }
+
+    .my-chances {
+      background-image: url("../assets/mychancebg.png");
+      width: 30vw;
+      height: 13vw;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-color: transparent;
+      border: none;
+      position: relative;
+
+      span {
+        margin-right: 2vw;
+        color: white;
+        font-size: 2.4vw;
+        left: 9vw;
+        position: absolute;
+        top: 4vw;
+      }
+    }
+  }
+}

@@ -1,0 +1,79 @@
+$standardWidth: 750;
+@function calcView($pixels) {
+  @return (($pixels/$standardWidth) * 100) + vw;
+}
+.select-box--box {
+    width: calcView(200);
+    position: absolute;
+    top: calcView(13);
+    right: calcView(10);
+    background-color: #123171;
+    font-size: 2vw;
+
+    .select-box--container {
+        height: calcView(30);
+        border: 1px solid #aaa;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
+
+        .select-box--selected-item {
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            padding: calcView(4) calcView(12);
+            vertical-align: middle;
+            color: white;
+            font-size: 2vw;
+          }
+          .select-box--items{
+            margin-top: calcView(4);
+          }
+          .select-box--items div {
+            border-bottom:calcView(1) solid #ddd;
+            border-left: calcView(1) solid #ddd;
+            border-right: calcView(1) solid #ddd;
+            padding: calcView(6);
+            padding-left: calcView(20);
+            background-color: #123171;
+            color: white;
+            line-height: 3vw;
+          }
+          .select-box--arrow {
+            width: calcView(30);
+            height: calcView(30);
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+            background: #aaaaaa;
+            position: absolute;
+            right: 0;
+            top: 0;
+
+            .select-box--arrow-down {
+                position: absolute;
+                top: calcView(10);
+                left:calcView(10);
+                width: 0;
+                height: 0;
+                border-left: calcView(8) solid transparent;
+                border-right: calcView(8) solid transparent;
+                border-top: calcView(10) solid red;
+              }
+              
+              .select-box--arrow-up {
+                position: absolute;
+                top: calcView(10);
+                left: calcView(10);
+                width: 0;
+                height: 0;
+                border-left: calcView(8) solid transparent;
+                border-right:calcView(8) solid transparent;
+                border-bottom: calcView(10) solid red;
+              }
+          }
+          
+       
+      }
+  }

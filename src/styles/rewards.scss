@@ -1,0 +1,78 @@
+$standardWidth: 750;
+@function calcView($pixels) {
+  @return (($pixels/$standardWidth) * 100) + vw;
+}
+
+.rewards-wrapper {
+//   width: 90vw;
+  background-image: url("../assets/Rewards-bg.png");
+  min-height: 85vw;
+  
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  margin-top: calcView(40);
+  padding-top: calcView(70);
+  position: relative;
+  .rewards-title{
+    position: absolute;
+    top: calcView(-6);
+    left: calcView(168);
+    width: calcView(370);
+  }
+  .rewards-tabs {
+    display: flex;
+    justify-content: center;
+
+    button {
+      width: 26vw;
+      height: 9.67vw;
+      background-color: transparent;
+      border: none;
+    }
+    button.hourly-active {
+      background-image: url("../assets/Hourly-select-btn.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    button.hourly-unactive {
+      background-image: url("../assets/Hourly-unselect-btn.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    button.overall-active {
+      background-image: url("../assets/Overall-select-btn.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    button.overall-unactive {
+      background-image: url("../assets/Overall-unselect -btn.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    button.cricket-master-on{
+      background-image: url('../assets/Cricket-master-on.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    button.cricket-master-off{
+      background-image: url('../assets/Cricket-master-off.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    button.master-blaster-off{
+      background-image: url('../assets/master-blaster-off.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    button.master-blaster-on{
+      background-image: url('../assets/master-blaster-on.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+
+  
+  
+}

@@ -1,0 +1,31 @@
+$standardWidth: 750;
+@function calcView($pixels) {
+  @return (($pixels/$standardWidth) * 100) + vw;
+}
+
+.event-gifts-wrapper{
+    // width: 90vw;
+    background-image: url('../assets/Event-gift-bg.png');
+    // margin: 0 auto;
+    min-height: calcView(400);
+    background-size: contain;
+    background-repeat: no-repeat;
+  
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .txtImg{
+      position: absolute;
+      top: calcView(-6);
+      // left: calcView(127);
+      left: 23vw;
+      width:calcView(370)
+    }
+
+    .gift-item{
+      width: 20vw;
+    }
+
+}

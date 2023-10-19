@@ -1,0 +1,132 @@
+$standardWidth: 750;
+@function calcView($pixels) {
+  @return (($pixels/$standardWidth) * 100) + vw;
+}
+
+.slider-container {
+  width: 70%;
+  position: relative;
+  margin: 0 auto;
+  height: 40vw;
+  font-size: 2vw;
+  .rankDiv{
+    text-align: center;
+    margin-top: 0vw;
+    position: absolute;
+    right: 47%;
+    top: 3vw;
+    color: white;
+  }
+  .slider-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    .single-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .reward-img {
+        width: 15vw;
+        position: relative;
+        top: 3vw;
+      }
+      img.reward-base{
+      width: 15vw;
+
+      }
+      p{
+        text-align: center;
+        color: white;
+        height: 7vw;
+        font-size: 2.5vw;
+      }
+    }
+    .two-single-item {
+      width: 80%;
+      display: flex;
+      .single-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    p{
+      text-align: center;
+      color: white;
+      height: 7vw;
+    }
+      }
+      img {
+        width: 15vw;
+      }
+    }
+    .tri-single-item {
+      width: 80%;
+      display: flex;
+      .single-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    p{
+      text-align: center;
+      color: white;
+      height: 7vw;
+    }
+      }
+      img {
+        width: 15vw;
+      }
+    }
+  }
+  .right-arrow {
+    width: 4vw;
+    background-image: url("../assets/rArrow.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 4vw;
+    background-color: transparent;
+    border: none;
+    right: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+  }
+  .left-arrow {
+    width: 4vw;
+    background-image: url("../assets/rArrow.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 4vw;
+    background-color: transparent;
+    border: none;
+    transform: scaleX(-1);
+    left: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+  }
+  .indicators {
+    display: flex;
+    justify-content: center;
+    gap: 1vw;
+    position: relative;
+    bottom: 2vw;
+  }
+  .dot {
+    width: 1vw;
+    height: 1vw;
+    background-color: black;
+    border-radius: 100%;
+  }
+  .active-dot {
+    width: 1vw;
+    height: 1vw;
+    background-color: white;
+    border-radius: 100%;
+  }
+}

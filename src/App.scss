@@ -1,0 +1,144 @@
+$standardWidth: 750;
+@function calcView($pixels) {
+  @return (($pixels/$standardWidth) * 100) + vw;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  // width: 100vw;
+  background-color:#0e1527;
+  // padding-left: calcView(30);
+  // padding-right: calcView(30);
+
+  .header {
+    // width: 100%;
+    // background-image: url('../src/assets/User-tab-assest/Header.jpg');
+    // height: calcView(400);
+    width: 100%;
+    height: 79.86667vw;
+    position: relative;
+
+    
+    img {
+      // object-fit: cover;
+      // object-position: center;
+      height: 79.86667vw;
+    width: 100%;
+    }
+  }
+
+  .guideBtn {
+    width: calcView(100);
+    height: calcView(50);
+    position: fixed;
+    right: calcView(-8);
+    top: calcView(75);
+    z-index: 1;
+    font-size: 2vw;
+    background-image: url('./assets/guidebtn.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+
+  }
+
+  .borderTopBottom{
+    border-top: 3px solid #f2fafd;
+    border-bottom: 3px solid #f2fafd;
+    border-style: dashed;
+
+  }
+  .tabBtnDiv{
+    height: 15.66667vw;
+    display: flex;
+    justify-content: space-around;
+    padding-top: calcView(10);
+    padding-bottom: calcView(10);
+    button{
+        width: 100%;
+        border: none;
+        height: 12vw;
+        background-color: transparent;
+      }
+
+    button.activeUser{
+      background-image:url('./assets/User-tab-assest/User-btn-active.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+
+    }
+    button.unActiveUser{
+      background-image:url('./assets/User-tab-assest/user-btn-unactive.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    button.activeTalent{
+      background-image:url('./assets/User-tab-assest/Talent-btn-active.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    button.unActiveTalent{
+      background-image:url('./assets/User-tab-assest/Talent-btn-unactive.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    
+  }
+
+  .mainTabs{
+    margin-top: calcView(50);
+    padding-right: 2vw;
+    padding-left: 2vw;
+ 
+  }
+  .marquee-wrap{
+    border-top: 3px solid #f2fafd;
+    border-bottom: 3px solid #f2fafd;
+    border-style: dashed;
+    margin-bottom: 2vw;
+    padding-top: calcView(5);
+    padding-bottom: calcView(5);
+    .marquee-item{
+      width: 56vw;
+      border-radius: 6.66667vw;
+      flex-direction: row;
+      color: black;
+      font-size: 1.5vw;
+      background-color: #ffffff;
+      padding: 0.66667vw;
+      display: flex;
+      align-items: center;
+      .user-img{
+        width: calcView(50);
+        height: calcView(50);
+        border-radius: 100%;
+      }
+      p{
+       
+        text-align: center;
+        width: 44vw;
+        font-size: 3vw;
+      }
+      .marq-coin{
+        width: 2vw
+      }
+    }
+  }
+
+
+  .copyrightText{
+    text-align: center;
+    color: white;
+    margin-top: 22vw;
+    font-size: 4vw;
+}
+  }
+

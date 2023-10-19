@@ -1,0 +1,124 @@
+$standardWidth: 750;
+@function calcView($pixels) {
+  @return (($pixels/$standardWidth) * 100) + vw;
+}
+.carousel {
+  overflow: hidden;
+  width: 50vw;
+  margin: 0 auto;
+  position: relative;
+
+  .inner {
+    white-space: nowrap;
+    transition: transform 0.3s;
+
+    .carousel-item {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      // height: calcView(200);
+     height: 46.66667vw;
+      background-color: transparent;
+      color: #fff;
+
+      .item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 40%;
+        }
+      }
+    }
+  }
+  .indicators {
+    display: flex;
+
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    button {
+      margin-right: 2vw;
+      background-color: black;
+      color: #fff;
+      border-radius: 100%;
+      width: 2vw;
+      border: none;
+      height: 2vw;
+      // .active {
+
+      //   background-color: #d9e6d9;
+      //   color: #fff;
+      //   border-radius: 100%;
+      //   width: 2vw;
+      //   height: 2vw;
+      //   border: none;
+      // }
+    }
+    button.active {
+      background-color: #d9e6d9;
+      color: #fff;
+      border-radius: 100%;
+      width: 2vw;
+      height: 2vw;
+      border: none;
+    }
+
+    // button.active {
+    //     // background-color: green;
+    //     // color: #fff;
+
+    //     background-color: #d9e6d9;
+    //     color: #fff;
+    //     border-radius: 100%;
+    //     width: 15px;
+    //     border: none;
+    //   }
+    //   button.unactive{
+    //     background-color: black;
+    //     color: #fff;
+    //     border-radius: 100%;
+    //     width: 15px;
+    //     border: none;
+    //   }
+  }
+
+  .nxt-prev-btns {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    button.prev {
+      background-image: url("../assets/rArrow.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: calcView(20);
+      background-color: transparent;
+      border: none;
+      transform: scaleX(-1);
+    }
+    button.next {
+      background-image: url("../assets/rArrow.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: calcView(20);
+      background-color: transparent;
+      border: none;
+    }
+  }
+}
+
+//   .indicators > button {
+//     margin: 5px;
+//   }
+//   .indicators >
